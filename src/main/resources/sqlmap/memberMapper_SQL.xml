@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.ddit.mapper.TestMemberMapper">
+
+	<insert id="signup" parameterType="memberVO">
+		insert into testmember(
+			MEM_NO, MEM_ID, MEM_PW, MEM_NAME
+		)values(
+			seq_testmember.nextval, #{memId}, #{memPw}, #{memName}
+		)
+	</insert>
+	
+	<select id="loginCheck" parameterType="memberVO" resultType="memberVO">
+		select
+			mem_no, mem_id, mem_pw, mem_name
+		from testmember
+		where mem_id = #{memId}
+		and mem_pw = #{memPw}	
+	</select>
+	
+
+</mapper>
+ 

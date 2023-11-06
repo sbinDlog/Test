@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="kr.or.ddit.vo.DDITBoardVO" alias="dditBoardVO"/>
+		<typeAlias type="kr.or.ddit.vo.DDITTagVO" alias="dditTagVO"/>
+		<typeAlias type="kr.or.ddit.vo.PaginationInfoVO" alias="pagingVO"/>
+		
+		<typeAlias type="kr.or.ddit.vo.AlramVO" alias="alarmVO"/>
+		<typeAlias type="kr.or.ddit.vo.TestMemberVO" alias="memberVO"/>
+	</typeAliases> 
+</configuration>

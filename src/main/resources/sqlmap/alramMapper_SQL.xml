@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.ddit.mapper.AlramMapper">
+	
+	<insert id="insertAlram" parameterType="alarmVO">
+		insert into ALRAM(
+			a_no, bo_no
+		)values(
+			SEQ_ALRAM.nextval, #{boNo}
+		)
+	</insert>
+	 
+</mapper>
+ 
